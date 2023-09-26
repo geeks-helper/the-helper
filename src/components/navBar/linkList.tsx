@@ -24,7 +24,9 @@ const LinkList: React.FC<LinkListProps> = ({ links, setToggle }) => {
     const { link, name } = props
     const safeLink = isNil(link) ? "" : link
     const isExternalLink = EXTERNAL_LINK_EXP.test(safeLink)
+    console.log({ name, link, safeLink })
     if (safeLink === ROOT) {
+      console.log("1111")
       return (
         <li key={name}>
           <Link to={safeLink} onClick={() => setToggle(false)}>
@@ -34,14 +36,17 @@ const LinkList: React.FC<LinkListProps> = ({ links, setToggle }) => {
       )
     }
     if (isExternalLink) {
+      console.log("2222")
+
       return (
         <li key={name}>
-          <a target="__blank" rel="noreferrer" href={safeLink}>
+          <a target="_blank" rel="noopener noreferrer" href={safeLink}>
             {name}
           </a>
         </li>
       )
     }
+    console.log("33333333333")
     return (
       <li key={name}>
         <Link to={safeLink}>{name}</Link>

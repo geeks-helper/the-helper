@@ -15,8 +15,7 @@ import {
 import LinkList from "./linkList"
 import MenuIcon from "./menuIcon"
 import ThemeToggleButton from "./themeToggleButton"
-import useMenu from "./useMenu"
-import type { UseMenuReturnType } from "./useMenu"
+import useMenu, { type UseMenuReturnType } from "./useMenu"
 
 interface NavBarProps {
   title?: string | null
