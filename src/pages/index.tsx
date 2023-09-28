@@ -1,7 +1,6 @@
 import React, { useLayoutEffect, useState } from "react"
 
-import type { PageProps } from "gatsby"
-import { graphql } from "gatsby"
+import { type PageProps, graphql } from "gatsby"
 import styled from "styled-components"
 
 import CategoryFilter from "~/src/components/catetgoryFilter"
@@ -18,7 +17,7 @@ const Home = ({
   const [posts, setPosts] = useState<Post[]>([])
   const currentCategory = pageContext.category
   const postData = data.allMarkdownRemark.edges
-
+  console.log({ data })
   useLayoutEffect(() => {
     const filteredPostData = currentCategory
       ? postData.filter(
@@ -99,7 +98,7 @@ const PostTitle = styled.h2`
 export const query = graphql`
   query Home {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(posts/blog)/" } }
+      filter: { fileAbsolutePath: { regex: "/(posts/blog|tools/blog)/" } }
       limit: 2000
       sort: { frontmatter: { date: DESC } }
     ) {

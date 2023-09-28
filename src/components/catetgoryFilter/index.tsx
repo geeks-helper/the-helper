@@ -3,8 +3,9 @@ import React, { useMemo, useRef } from "react"
 import { type GatsbyLinkProps } from "gatsby"
 import kebabCase from "lodash/kebabCase"
 
+import useScrollCenter from "../../hooks/useScrollCenter"
+
 import * as S from "./styles"
-import useScrollCenter from "./useScrollCenter"
 
 const ACTIVE = "active"
 const ALL_CATEGORY_NAME = "All"

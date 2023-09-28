@@ -19,11 +19,25 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const mainTemplate = path.resolve(`./src/pages/index.tsx`)
   const blogPostTemplate = path.resolve(`./src/templates/blogPost.tsx`)
+  const toolPostTemplate = path.resolve(`./src/templates/toolPost.tsx`)
 
   const result = await graphql(`
     {
       postsRemark: allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/(posts/blog)/" } }
+        sort: { frontmatter: { date: DESC } }
+        limit: 2000
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+      toolsRemark: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/(tools/blog)/" } }
         sort: { frontmatter: { date: DESC } }
         limit: 2000
       ) {
@@ -45,11 +59,21 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   const posts = result.data.postsRemark.edges
-
+  const tools = result.data.toolsRemark.edges
+  console.log({ posts })
   posts.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
       component: blogPostTemplate,
+      context: {
+        slug: node.fields.slug,
+      },
+    })
+  })
+  tools.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: toolPostTemplate,
       context: {
         slug: node.fields.slug,
       },

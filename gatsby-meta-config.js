@@ -17,14 +17,15 @@
 
 /** @type {MetaConfig} */
 const metaConfig = {
-  title: "Dev Ed",
-  description: `Ed's Blog`,
-  author: "Ed",
+  title: "The Helper",
+  description: `Helpers tools`,
+  author: "Fadi O. Ghali",
   siteUrl: "https://gatsby-starter-apple.netlify.app",
   lang: "en",
-  utterances: "sungik-choi/gatsby-starter-apple-comment",
+  utterances: "geeks-helper/the-helper",
+
   links: {
-    github: "https://github.com/sungik-choi/gatsby-starter-apple",
+    github: "https://github.com/geeks-helper/the-helper",
   },
   favicon: "src/images/icon.png",
 }

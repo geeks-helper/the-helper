@@ -5,17 +5,18 @@ import styled from "styled-components"
 
 import Comment from "~/src/components/comment"
 import SEO from "~/src/components/seo"
+import WordsCount from "~/src/features/WordsCount"
 import Layout from "~/src/layouts/layout"
 import Category from "~/src/styles/category"
 import DateTime from "~/src/styles/dateTime"
 import Markdown from "~/src/styles/markdown"
 import { rhythm } from "~/src/styles/typography"
 
-const BlogPost: React.FC<PageProps<Queries.Query>> = ({ data }) => {
+const toolPost: React.FC<PageProps<Queries.Query>> = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark!
-  const { title, desc, thumbnail, date, category } = frontmatter!
-
+  const { title, desc, thumbnail, date, category, tool } = frontmatter!
+  console.log("xxxxxxxxxxxxxxxxxx", tool)
   const ogImagePath =
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     thumbnail &&
@@ -37,6 +38,9 @@ const BlogPost: React.FC<PageProps<Queries.Query>> = ({ data }) => {
                   <Title>{title}</Title>
                   <Desc>{desc}</Desc>
                 </header>
+                <Divider />
+                <WordsCount />
+
                 <Divider />
                 <Markdown
                   dangerouslySetInnerHTML={{ __html: html ?? "" }}
@@ -133,7 +137,7 @@ const Title = styled.h1`
 `
 
 export const query = graphql`
-  query BlogPostPage($slug: String!) {
+  query ToolPostPage($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
@@ -146,9 +150,10 @@ export const query = graphql`
         }
         date(formatString: "YYYY-MM-DD")
         category
+        tool
       }
     }
   }
 `
 
-export default BlogPost
+export default toolPost
