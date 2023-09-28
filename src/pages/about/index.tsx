@@ -6,7 +6,7 @@ import SEO from "~/src/components/seo"
 import Layout from "~/src/layouts/layout"
 import { rhythm } from "~/src/styles/typography"
 
-import * as S from "./style"
+import * as S from "~/src/styles/about"
 
 const About = () => {
   const data = useStaticQuery<Queries.Query>(graphql`
