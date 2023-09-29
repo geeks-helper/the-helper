@@ -24,7 +24,7 @@ const SEO: React.FC<SEOProps> = ({ title, desc = "", image }) => {
   const description = desc || site.description
   const ogImageUrl =
     site.siteUrl ?? "" + (image || (defaultOpenGraphImage as string))
-  console.log("ogImageUrl ===> ", image)
+
   return (
     <Helmet
       htmlAttributes={{ lang: site.lang ?? DEFAULT_LANG }}
