@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-apple",
+  "name": "the-helper",
   "version": "3.0.0",
   "description": "Gatsby blog starter kit with beautiful and responsive design",
   "main": "index.js",
@@ -83,7 +83,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sungik-choi/gatsby-starter-apple.git"
+    "url": "https://github.com/geeks-helper/the-helper"
   },
   "keywords": [
     "gatsby"
@@ -91,8 +91,8 @@
   "author": "Sungik Choi <sungik.dev@gmail.com> (http://sungikchoi.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sungik-choi/gatsby-starter-apple/issues"
+    "url": "https://github.com/geeks-helper/the-helper/issues"
   },
-  "homepage": "https://github.com/sungik-choi/gatsby-starter-apple#readme",
+  "homepage": "https://github.com/geeks-helper/the-helper",
   "packageManager": "yarn@3.5.1"
 }

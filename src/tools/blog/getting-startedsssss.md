@@ -88,4 +88,4 @@ export default About
 
 You can freely customize each componentfile using the styled-component. If you want to change the style globally, you can change the `styles/globalStyle` file.
 
-Thank you for using `gatsby-starter-apple`. If you have any questions, please leave them on this **[link](https://github.com/sungik-choi/gatsby-starter-apple/issues).**
+Thank you for using `the-helper`. If you have any questions, please leave them on this **[link](https://github.com/geeks-helper/the-helper/).**

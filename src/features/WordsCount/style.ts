@@ -60,3 +60,27 @@ export const CountInfo = styled.div`
   color: #777;
   display: inline-block;
 `
+export const StyledDropdownContainer = styled.div`
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  margin-bottom: 24px;
+`
+
+export const StyledLabel = styled.label`
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333;
+`
+
+export const CustomDropdown = styled.select`
+  appearance: none;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  width: 200px; /* Adjust the width as needed */
+`

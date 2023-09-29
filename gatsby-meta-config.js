@@ -20,7 +20,7 @@ const metaConfig = {
   title: "The Helper",
   description: `Helpers tools`,
   author: "Fadi O. Ghali",
-  siteUrl: "https://gatsby-starter-apple.netlify.app",
+  siteUrl: "https://geeks-helper.github.io/",
   lang: "en",
   utterances: "geeks-helper/the-helper",
 

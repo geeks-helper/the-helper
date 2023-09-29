@@ -16,12 +16,13 @@ const toolPost: React.FC<PageProps<Queries.Query>> = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark!
   const { title, desc, thumbnail, date, category, tool } = frontmatter!
-  console.log("xxxxxxxxxxxxxxxxxx", tool)
+  console.log(frontmatter)
   const ogImagePath =
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     thumbnail &&
     thumbnail?.childImageSharp?.gatsbyImageData!.images!.fallback!.src
 
+  console.log("==>", ogImagePath)
   return (
     <Layout>
       <SEO title={title} desc={desc} image={ogImagePath} />
@@ -38,6 +39,7 @@ const toolPost: React.FC<PageProps<Queries.Query>> = ({ data }) => {
                   <Title>{title}</Title>
                   <Desc>{desc}</Desc>
                 </header>
+                <img src={ogImagePath} />
                 <Divider />
                 <WordsCount />
 
@@ -50,7 +52,7 @@ const toolPost: React.FC<PageProps<Queries.Query>> = ({ data }) => {
             </InnerWrapper>
           </OuterWrapper>
         </article>
-        <CommentWrap style={{ border: "1px solid red" }}>
+        <CommentWrap>
           <Comment />
         </CommentWrap>
       </main>
@@ -105,7 +107,7 @@ const Desc = styled.p`
   margin-top: var(--sizing-lg);
   line-height: 1.5;
   font-size: var(--text-lg);
-
+  margin-bottom: 16px;
   @media (max-width: ${({ theme }) => theme.device.sm}) {
     line-height: 1.31579;
     font-size: 1.1875rem;

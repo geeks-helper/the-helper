@@ -61,14 +61,14 @@ Open **`gatsby-meta-config.js`** and fix meta data of your blog.
 
 ```js
 module.exports = {
-  title: "Dev Ed", // Your website title
-  description: `Ed's Blog`, // Your website description
-  author: "Ed", // Maybe your name
-  siteUrl: "https://gatsby-starter-apple.netlify.app", // Your website URL
+  title: "Dev Fadi", // Your website title
+  description: `Fadi's Blog`, // Your website description
+  author: "Fadi", // Maybe your name
+  siteUrl: "https://geeks-helper.github.io/", // Your website URL
   lang: "en", // Language
-  utterances: "sungik-choi/gatsby-starter-apple-comment", // Github repository to store comments
+  utterances: "geeks-helper/the-helper", // Github repository to store comments
   links: {
-    github: "https://github.com/sungik-choi/gatsby-starter-apple", // Your github repository
+    github: "the-helper", // Your github repository
   },
   icon: "src/images/icon.png", //  Favicon Path
 }
