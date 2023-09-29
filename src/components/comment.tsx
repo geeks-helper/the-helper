@@ -19,7 +19,6 @@ const Comment = () => {
   const isUtterancesCreated = useRef(false)
 
   useEffect(() => {
-    console.log({ repo })
     if (!repo) return
     let themeMode: ThemeMode
 
@@ -59,7 +58,6 @@ const Comment = () => {
       }
       utterancesEl?.contentWindow?.postMessage(message, src)
     }
-    console.log({ bbbb: isUtterancesCreated.current })
     isUtterancesCreated.current ? postThemeMessage() : createUtterancesEl()
   }, [repo, theme])
   return <div ref={containerRef} />

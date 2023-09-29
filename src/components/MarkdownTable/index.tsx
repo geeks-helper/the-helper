@@ -44,7 +44,6 @@ function analyzeString(
   for (const word in wordCounts) {
     const count: number = wordCounts[word]
     const percentage: string = ((count / totalWordCount) * 100).toFixed(2) + "%"
-    console.log({ percentage })
     wordData.push({ word, count, percentage })
   }
 
@@ -53,7 +52,6 @@ function analyzeString(
 
 const MarkdownTable = ({ text = "" }) => {
   const [data, setData] = useState([])
-  console.log({ text })
   useEffect(() => {
     const arr: string[] | any = analyzeString(text)
     setData(arr)

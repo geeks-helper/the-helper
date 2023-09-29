@@ -5,6 +5,7 @@ import styled from "styled-components"
 
 import Comment from "~/src/components/comment"
 import SEO from "~/src/components/seo"
+import ScrabbleWordFinder from "~/src/features/ScrabbleWordFinder"
 import WordsCount from "~/src/features/WordsCount"
 import Layout from "~/src/layouts/layout"
 import Category from "~/src/styles/category"
@@ -12,17 +13,28 @@ import DateTime from "~/src/styles/dateTime"
 import Markdown from "~/src/styles/markdown"
 import { rhythm } from "~/src/styles/typography"
 
+const RenderTool = ({ tool }) => {
+  if (!tool) return
+  switch (tool) {
+    case "scrabbleWordFinder":
+      return <ScrabbleWordFinder />
+    case "wordsCount":
+      return <WordsCount />
+
+    default:
+      return <p>invalid tool name</p>
+  }
+}
+
 const toolPost: React.FC<PageProps<Queries.Query>> = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark!
   const { title, desc, thumbnail, date, category, tool } = frontmatter!
-  console.log(frontmatter)
   const ogImagePath =
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     thumbnail &&
     thumbnail?.childImageSharp?.gatsbyImageData!.images!.fallback!.src
 
-  console.log("==>", ogImagePath)
   return (
     <Layout>
       <SEO title={title} desc={desc} image={ogImagePath} />
@@ -41,7 +53,7 @@ const toolPost: React.FC<PageProps<Queries.Query>> = ({ data }) => {
                 </header>
                 <img src={ogImagePath} />
                 <Divider />
-                <WordsCount />
+                <RenderTool tool={tool} />
 
                 <Divider />
                 <Markdown

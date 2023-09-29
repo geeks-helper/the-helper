@@ -42,7 +42,6 @@ const LinkList: React.FC<LinkListProps> = ({ links, setToggle }) => {
         </li>
       )
     }
-    console.log("33333333333")
     return (
       <li key={name}>
         <Link to={safeLink}>{name}</Link>

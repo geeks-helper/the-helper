@@ -17,7 +17,6 @@ const Home = ({
   const [posts, setPosts] = useState<Post[]>([])
   const currentCategory = pageContext.category
   const postData = data.allMarkdownRemark.edges
-  console.log({ data })
   useLayoutEffect(() => {
     const filteredPostData = currentCategory
       ? postData.filter(
