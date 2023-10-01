@@ -3,7 +3,7 @@ title: "Scrabble Word Finder"
 category: "Scrabble Word Finder"
 date: "2023-09-29 12:00:00 +09:00"
 desc: "The Words Count component is a simple and helpful tool designed to assist you when working with text."
-thumbnail: "./images/scrabble-featured.jpg"
+thumbnail: "../../images/scrabble-featured.jpg"
 alt: "code block graphic"
 tool: "scrabbleWordFinder"
 ---

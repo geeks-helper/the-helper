@@ -3,7 +3,7 @@ title: "Words Count Component"
 category: "Words count"
 date: "2023-09-28 12:00:00 +09:00"
 desc: "The Words Count component is a simple and helpful tool designed to assist you when working with text."
-thumbnail: "./images/wc.png"
+thumbnail: "../../images/wc.png"
 alt: "code block graphic"
 tool: "wordsCount"
 ---
