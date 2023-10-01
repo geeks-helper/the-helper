@@ -126,7 +126,6 @@ const ClipPathGenerator = () => {
   return (
     <div
       style={{
-        border: "1px solid red",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
