@@ -5,6 +5,7 @@ import styled from "styled-components"
 
 import Comment from "~/src/components/comment"
 import SEO from "~/src/components/seo"
+import ClipPathGenerator from "~/src/features/ClipPathGenerator"
 import ScrabbleWordFinder from "~/src/features/ScrabbleWordFinder"
 import WordsCount from "~/src/features/WordsCount"
 import Layout from "~/src/layouts/layout"
@@ -20,6 +21,8 @@ const RenderTool = ({ tool }) => {
       return <ScrabbleWordFinder />
     case "wordsCount":
       return <WordsCount />
+    case "clipPathGenerator":
+      return <ClipPathGenerator />
 
     default:
       return <p>invalid tool name</p>
