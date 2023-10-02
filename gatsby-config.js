@@ -183,7 +183,6 @@ module.exports = {
   // graphqlTypegen: true,
   siteMetadata,
   pathPrefix: "/the-helper",
-  assetPrefix: "/the-helper",
   plugins: [
     ...corePlugins,
     ...devPlugins,
