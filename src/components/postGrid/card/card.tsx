@@ -23,7 +23,7 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <Wrapper>
-      <CenteredImg src={`/the-helper/${thumbnail}`} alt={alt} />
+      <CenteredImg src={thumbnail} alt={alt} />
       <Text>
         <div>
           <Category>{category}</Category>
