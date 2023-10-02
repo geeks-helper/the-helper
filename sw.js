@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-725a225c578309536467.js"
+    "url": "webpack-runtime-5fe9be62ec56ca86bc77.js"
   },
   {
     "url": "framework-d36bfe74c5ffac4ed8f4.js"
   },
   {
-    "url": "app-17f6455d436021785bcf.js"
+    "url": "app-a0676cce06a3c6973c24.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "543a91e0df924d214b87696325c46c47"
+    "revision": "8eedcea55d6600caa5e8f907688a95f0"
   },
   {
     "url": "manifest.webmanifest",
@@ -146,12 +146,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/the-helper/the-helper`), ``)
+  pathname = pathname.replace(new RegExp(`^/the-helper`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/the-helper/the-helper/app-17f6455d436021785bcf.js`))) {
+  if (!resources || !(await caches.match(`/the-helper/app-a0676cce06a3c6973c24.js`))) {
     return await fetch(event.request)
   }
 
@@ -164,7 +164,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/the-helper/the-helper/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/the-helper/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })

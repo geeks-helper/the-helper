@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://geeks-helper.github.io/the-helper/the-helper/sitemap-index.xml
+Sitemap: https://geeks-helper.github.io/the-helper/sitemap-index.xml
 Host: https://geeks-helper.github.io
