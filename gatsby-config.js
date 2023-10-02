@@ -180,7 +180,7 @@ const pwaPlugins = [
 ]
 
 module.exports = {
-  graphqlTypegen: true,
+  // graphqlTypegen: true,
   siteMetadata,
   pathPrefix: "/the-helper",
   plugins: [
