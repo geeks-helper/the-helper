@@ -32,7 +32,6 @@ const CenteredImg: React.FC<CenteredImgProps> = ({ src, alt }) => {
   `)
 
   const image = useMemo(() => {
-    console.log(data.allImageSharp.edges, src)
     const imageSharp = data.allImageSharp.edges.find(
       edge => edge.node.id === src
     )
