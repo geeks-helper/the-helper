@@ -182,7 +182,7 @@ const pwaPlugins = [
 module.exports = {
   // graphqlTypegen: true,
   siteMetadata,
-  // pathPrefix: "/the-helper",
+  pathPrefix: "/the-helper",
   plugins: [
     ...corePlugins,
     ...devPlugins,
